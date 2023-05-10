@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../FrontEndStore_inicio/CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../FrontEndStore_inicio/CSS/style.css">
+    <title>FrontEnd Store</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Logotipo" class="header__logo">
+        </a>
+    </header>   <!--Aqui termina el header-->
+
+    <nav class="navegacion">
+        <a class ="navegacion__enlace" href="index.html">Tienda</a>
+        <a class ="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+        <!--Nevegacion es el bloque
+        navegacion__enlace es el elemento
+        navegacion__enlace--activo es el modificador
+        BEM-->
+    </nav>  <!--Aqui termina el nav-->
+
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit, 
+                    facilisis ac tortor ut, maximus ornare magna. Nulla orci metus, accumsan ac bibendum sed, 
+                    egestas sed erat. Duis eu tincidunt purus. Sed iaculis lacus vel sem cursus malesuada. 
+                    Vestibulum ultrices tellus in iaculis elementum. Vivamus metus purus, iaculis sed est a, 
+                    ultricies placerat tortor. Mauris consectetur sem consequat, pulvinar magna a, pretium nulla.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit, 
+                    facilisis ac tortor ut, maximus ornare magna. Nulla orci metus, accumsan ac bibendum sed, 
+                </p>
+            </div>
+            <img class="nosotros__imagen" src="img/nosotros.jpg" alt="imagen nosotros">
+        </div>
+    </main> <!--Aqui termina el main-->
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">Porque comprar con nosotros</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit,</p>
+            </div><!--clase bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para devs</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit,</p>
+            </div><!--clase bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envio gratis</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit,</p>
+            </div><!--clase bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">la mejor calidad</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac lacus nisi. 
+                    Sed mauris nunc, rutrum vestibulum mattis ut, ultrices vitae erat. Mauris libero elit,</p>
+            </div><!--clase bloque-->
+
+        </div><!--clase bloques-->
+    </section>
+
+    <footer class="footer">
+        <p class="footer__texto"> FrontEnd Store - Todos los derechos reservados 2023.</p>    
+    </footer>
+</body>
+</html>

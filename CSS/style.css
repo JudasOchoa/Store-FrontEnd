@@ -1,0 +1,249 @@
+/*Customs-propertis
+Son variables de CSS para usarlas mas abajo
+Puedes Almacenar cualquier tipo de valores*/
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+/*Se utiliza para establecer el modejo de caja y tamaño de fuente base
+para todos los elementos HTML de la pagina
+y darte un font-zise del 62.5% para los rem*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+
+/*los elementos heredan el modelo de caja establecido en la primera parte del codigo
+lo que hace que sea mas facil trabajar con diseños de caja*/
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/*Variables Globales- Se aplican a todas las etiquetas con el mismo nombre*/
+body{
+    background-color: var(--primario); /*Color de fondo*/
+    font-size: 1.6rem; /*Tamaño de la fuente*/
+    line-height: 1.5; /*Interlinedo*/
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif; /*Estilo de letra*/
+    color: var(--blanco); /*Color de las letras*/
+}
+
+a{
+    text-decoration: none; /*Quitar la linea de abajo del enlace*/
+}
+
+img{
+    width: 100%;
+}
+
+.contenedor{ /*Clase del contenido*/
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center/*Alinear los Titulos al centro*/;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 4rem;
+}
+
+/*Header - usando BEM*/
+.header{
+    display: flex;  /*FlexBox        Row y Column*/
+    justify-content: center; /*Se utiliza para sentrar verticalmente*/
+}
+
+.header__logo{
+    margin: 2rem 0rem; /*3rem es la parte de arriba y abajo     0rem es de izquierda a derecha*/
+}
+
+/*FOOTER*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
+
+/*Navegacion - USANDO BEM*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem  0;
+    display: flex;
+    justify-content:center;
+    gap: 4rem; /*Para Separar los elementos -Flexbox*/
+}
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo{
+    color: var(--secundario);
+}
+/*Grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2 1fr); /*Indica 2columnas, 1fraccion de espacio*/
+    gap: 2rem;
+}
+
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);  
+    }
+}
+/*Productos*/
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+    
+}
+
+.producto__nombre{
+    font-size: 4rem;
+}
+
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*Graficos*/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;   /*Para no repetir la imagen*/
+    background-size: cover;     /*La imagen llenara el espacio disponible*/
+}
+.grafico--camisas{
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;    /*grid-row son los numero de arriba hacia abajo del grid*/
+    grid-column: 1 / 3; /*grid-columns son las columnas de izquiera  a derecha*/
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px){
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }   
+}
+
+/*NOSOTROS.html*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px){
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2/3 ;
+    }
+}
+
+/*Bloques*/
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+    margin: 0;
+}
+
+/*Pagina del producto*/
+@media (min-width: 768px){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.formulario__campo{
+    border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+.formulario___submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+.formulario___submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
